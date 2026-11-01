@@ -20,12 +20,10 @@ export const App = () => {
 
   const jobList = jobs ?? [];
 
-  // Создание задачи
   const handleAddJob = (job: Job) => {
     set((prev) => [...prev, job]);
   };
 
-  // Изменение статуса
   const handleToggleJob = (id: string) => {
     set((prev) =>
       prev.map((job) =>
@@ -36,12 +34,10 @@ export const App = () => {
     );
   };
 
-  // Удаление задачи
   const handleRemoveJob = (id: string) => {
     set((prev) => prev.filter((job) => job.id !== id));
   };
 
-  // Фильтрация
   const filteredJobs = useMemo(() => {
     switch (filter) {
       case "finished":
