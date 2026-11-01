@@ -3,7 +3,6 @@ import {
   Children,
   createContext,
   isValidElement,
-  useContext,
   useEffect,
   useRef,
   useState,
@@ -11,7 +10,7 @@ import {
   type ReactNode,
 } from "react";
 
-import { SelectItem, type SelectItemProps } from "./select-item";
+import { type SelectItemProps } from "./select-item";
 
 type SelectContextValue = {
   value: string;
